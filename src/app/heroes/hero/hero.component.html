@@ -1,0 +1,47 @@
+<h1>{{name}}</h1>
+
+<dl>
+  <div>
+    <dt>Nombre:</dt>
+    <dd>{{name}}</dd>
+  </div>
+
+  <div>
+    <dt>Edad:</dt>
+    <dd>{{age}}</dd>
+  </div>
+
+  <div>
+    <dt>Método:</dt>
+    <dd>{{getHeroDesc()}}</dd>
+  </div>
+
+  <div>
+    <dt>Capitalizado:</dt>
+    <dd>{{capitalizedName}}</dd>
+  </div>
+</dl>
+
+
+<div>
+  <button
+    *ngIf="name !== 'ironman'"
+    (click)="changeHero()" class="btn btn-primary mx-2">
+    Cambiar Nombre
+  </button>
+</div>
+
+<div>
+  <button
+    *ngIf="age !== 34"
+    (click)="changeAge()" class="btn btn-primary">
+    Cambiar Edad
+  </button>
+</div>
+
+<div>
+  <button
+    (click)="resetForm()" class="btn btn-primary">
+    Reset Form
+  </button>
+</div>
