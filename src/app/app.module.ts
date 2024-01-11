@@ -6,17 +6,20 @@ import { AppComponent } from './app.component';
 
 import { counterModule } from './counter/counter.module';
 import { HeroesModule } from './heroes/heroes.module';
+import { TheOfficeComponent } from './theoffice/pages/main-page.component';
+import { TheofficeModule } from './theoffice/theoffice.module';
 
 
 @NgModule({
   declarations: [
-    AppComponent,
+    AppComponent
   ],
   imports: [
     BrowserModule,
     counterModule,
     HeroesModule,
     AppRoutingModule,
+    TheofficeModule
   ],
   providers: [
     provideClientHydration()
